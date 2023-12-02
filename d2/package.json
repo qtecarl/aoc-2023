@@ -11,6 +11,6 @@
     "start": "node index.js",
     "migrate:up": "DATABASE_URL=postgres://dolla:password@localhost:9001/aoc2023d2 node-pg-migrate up",
     "migrate:down": "DATABASE_URL=postgres://dolla:password@localhost:9001/aoc2023d2 node-pg-migrate down",
-    "go": "PGPASSWORD=password psql -h localhost -p 9001 -U dolla -d aoc2023d2 -c \"SELECT get_legal_hand_sum(12, 13, 14);\""
+    "go": "PGPASSWORD=password psql -h localhost -p 9001 -U dolla -d aoc2023d2 -c \"SELECT get_min_cubes();\""
   }
 }
