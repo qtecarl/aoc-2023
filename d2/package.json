@@ -1,0 +1,16 @@
+{
+  "name": "d2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-pg-migrate": "^6.2.2",
+    "pg": "^8.11.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "migrate:up": "DATABASE_URL=postgres://dolla:password@localhost:9001/aoc2023d2 node-pg-migrate up",
+    "migrate:down": "DATABASE_URL=postgres://dolla:password@localhost:9001/aoc2023d2 node-pg-migrate down",
+    "go": "PGPASSWORD=password psql -h localhost -p 9001 -U dolla -d aoc2023d2 -c \"SELECT get_legal_hand_sum(12, 13, 14);\""
+  }
+}
